@@ -6,7 +6,7 @@ on:
       benchmark_path:
         description: 'Path to the benchmark'
         required: true
-        default: './test.yml'
+        default: 'actions.yml'
     
 jobs:
   ancd:
