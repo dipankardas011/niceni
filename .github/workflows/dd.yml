@@ -16,4 +16,4 @@ jobs:
         uses: actions/checkout@v4
       - uses: jenseng/dynamic-uses@v1
         with:
-          uses: ${{ inputs.benchmark_path }}
+          uses: dipankardas011/niceni/${{ inputs.benchmark_path }}@main
