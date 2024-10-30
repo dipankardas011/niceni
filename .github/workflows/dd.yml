@@ -2,6 +2,11 @@ name: nice
 
 on:
   workflow_dispatch:
+    inputs:
+      benchmark_path:
+        description: 'Path to the benchmark'
+        required: true
+        default: './test.yml'
     
 jobs:
   ancd:
@@ -9,3 +14,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - uses: jenseng/dynamic-uses@v1
+        with:
+          uses: ${{ inputs.benchmark_path }}
